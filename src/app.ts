@@ -1,7 +1,10 @@
 import express from 'express';
 import config from './config';
+import morgan from './api/middleware/morgan';
 
 const app = express();
+
+app.use(morgan);
 
 app.get('/', (req, res) => {
   res.send('hello');
