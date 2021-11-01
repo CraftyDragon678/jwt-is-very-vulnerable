@@ -7,5 +7,9 @@
   },
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "scripts": {
+    "dev": "nodemon",
+    "start": "ts-node ./src/app.ts"
   }
 }
