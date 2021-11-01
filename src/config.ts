@@ -15,6 +15,9 @@ class ConfigError extends Error {
 
 const config = {
   port: process.env['PORT'],
+  jwtSecret: process.env['JWT_SECRET']!!,
 };
+
+if (!config.jwtSecret) throw new ConfigError('jwtSecret', 'JWT_SECRET');
 
 export default config;
