@@ -7,4 +7,8 @@ app.get('/', (req, res) => {
   res.send('hello');
 });
 
-app.listen(config.port ?? 3000);
+const PORT = config.port ?? 3000;
+
+app.listen(PORT, () => {
+  console.log(`server opened at ${PORT}`);
+});

@@ -7,7 +7,7 @@ class ConfigError extends Error {
    * @param {string} field
    * @param {string} envName
    */
-  constructor(field, envName) {
+  constructor(field: string, envName: string) {
     super(`${field} is not provided. please check ${envName} in .env file`);
     this.name = 'ConfigError';
   }
